@@ -28,7 +28,7 @@ int main()
 {
 	bool quit = false;
 
-	window = SDL_CreateWindow("Jogo Visual C++", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED,
+	window = SDL_CreateWindow("Breakout", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED,
 		WINDOWS_WIDTH, WINDOW_HEIGHT, SDL_WINDOW_SHOWN);
 
 	surface = SDL_GetWindowSurface(window);
@@ -42,7 +42,7 @@ int main()
 	{
 
 		SDL_Event e;
-		SDL_Rect player = { 0, 0, 32, 32 };
+		SDL_Rect player = { 300, 550, 230, 32 };
 		Uint32 player_color = SDL_MapRGB(surface->format, 255, 50, 100);
 
 		while (!quit)
@@ -58,21 +58,24 @@ int main()
 					switch (keyDown)
 					{
 					case SDLK_RIGHT:
-						if ((player.x + 32) < WINDOWS_WIDTH)
+						if ((player.x + 32) < 560)
 							player.x += 32;
+					destroyWindows();
+
+					
 						break;
 					case SDLK_LEFT:
-						if ((player.x - 32) >= 0)
+						if ((player.x - 32) >= 10)
 							player.x -= 32;
 						break;
-					case SDLK_UP:
+					/*case SDLK_UP:
 						if ((player.y - 32) >= 0)
 							player.y -= 32;
 						break;
 					case SDLK_DOWN:
 						if ((player.y + 32) < WINDOW_HEIGHT)
 							player.y += 32;
-						break;
+						break;*/
 					}
 				default:
 					break;
