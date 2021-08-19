@@ -1,5 +1,6 @@
 # Breakout
-##Recriando game Breakout com SDL em C++
+
+**Recriando game Breakout com SDL em C++**
 
 O jogo está em desenvolvimento, e logo ganhara a forma real.
 
