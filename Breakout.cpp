@@ -60,8 +60,7 @@ int main()
 					case SDLK_RIGHT:
 						if ((player.x + 32) < 560)
 							player.x += 32;
-					destroyWindows();
-
+					//destroyWindows();
 					
 						break;
 					case SDLK_LEFT:
